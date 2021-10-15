@@ -19,3 +19,14 @@ Gy = cv2.filter2D(image, -1, Vert_filter,
 anchor=(-1,-1), borderType=cv2.BORDER_CONSTANT)
 
 G = abs(Gx + Gy)
+
+# Show images
+cv2.namedWindow("Horizontal filter")
+cv2.namedWindow("Vertical filter")
+cv2.namedWindow("Magnitude")
+cv2.imshow("Horizontal filter", Gx)
+cv2.imshow("Vertical filter", Gy)
+cv2.imshow("Magnitude", G)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
